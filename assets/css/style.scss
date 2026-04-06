@@ -1,0 +1,155 @@
+---
+---
+
+@import "minima";
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500&display=swap');
+
+:root {
+  --ink: #1a1a18;
+  --muted: #5a5a55;
+  --faint: #a0a098;
+  --rule: #e2e2da;
+  --bg: #fafaf7;
+  --accent: #2a5c45;
+}
+
+/* Base */
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* Header / nav */
+.site-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: none;
+}
+
+.site-title, .site-title:visited {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.site-title:hover { color: var(--accent); text-decoration: none; }
+
+.site-nav .page-link {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.site-nav .page-link:hover { color: var(--accent); }
+
+/* Main content */
+.page-content {
+  padding: 3rem 0;
+}
+
+.wrapper {
+  max-width: 660px;
+}
+
+/* Headings */
+h1 {
+  font-family: 'Lora', serif;
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: 1.5rem;
+  margin-bottom: 0.1rem;
+}
+
+/* Paragraphs & text */
+p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 0.75rem;
+}
+
+em { color: var(--faint); font-style: normal; font-size: 0.85rem; }
+
+strong { font-weight: 500; color: var(--muted); }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 1.5rem 0;
+}
+
+/* Links */
+a { color: var(--accent); }
+a:hover { color: var(--ink); }
+
+/* Inline code = skill tags */
+code {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.78rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 2px 12px;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+code:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Footer */
+.site-footer {
+  background: var(--bg);
+  border-top: 1px solid var(--rule);
+  font-size: 0.78rem;
+  color: var(--faint);
+}
+
+.site-footer a { color: var(--faint); }
+.site-footer a:hover { color: var(--accent); }
+
+/* Page load fade in */
+.page-content .wrapper {
+  animation: rise 0.5s ease both;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  h1 { font-size: 1.8rem; }
+  .page-content { padding: 2rem 0; }
+}
